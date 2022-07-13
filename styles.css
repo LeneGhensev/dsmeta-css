@@ -111,6 +111,60 @@ header {
     background-color: #384459;
 }
 
-.dsmeta-sales-table tbody tr:nth-child(odd){ /*define formatação para o filho ímpar do tr*/
+.dsmeta-sales-table tbody tr:nth-child(odd){ /*define formatação para o filho ímpar do tr, ou seja,
+    vai pintar cor sim, cor não*/
     background-color: #242C3B;
+}
+
+.dsmeta-red-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dsmeta-red-btn {
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 107, 114, 0.1);
+    border: 1px solid #FF6B72;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dsmeta-red-btn img {
+    width: 19px;
+}
+
+.show576 {
+    display: none;
+}
+
+.show992 {
+    display: none;
+}
+
+@media (min-width: 576px) { /*somente será aplicada essa config dentro das chaves a partir da largura que defini*/
+    .show576 {
+        display: table-cell; /*vai aparecer normalmente a info*/
+    }
+
+    .dsmeta-card {
+        padding: 35px;
+    }
+
+    .dsmeta-sales-table tbody tr{
+        height: 55px;
+    }
+
+    .dsmeta-sales-table tbody {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) { /*somente será aplicada essa config dentro das chaves a partir da largura que defini*/
+    .show992 {
+        display: table-cell; /*vai aparecer normalmente a info*/
+    }
 }
